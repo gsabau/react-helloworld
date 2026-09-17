@@ -1,10 +1,20 @@
 import { createRoot } from 'react-dom/client';
+import { useState } from 'react';
+import { ToggleButton } from './ToggleButton.jsx';
 
 function App() {
+  const [excited, setExcited] = useState(false);
+
   return (
     <main style={styles.main}>
-      <h1 style={styles.heading}>Hello World</h1>
-      <p style={styles.sub}>Smallest React app with Vite</p>
+      <div style={styles.stack}>
+        <h1 style={styles.heading}>{excited ? 'Hello Hello' : 'Hello World'}</h1>
+        <p style={styles.sub}>Smallest React app with Vite</p>
+        <ToggleButton
+          pressed={excited}
+          onToggle={() => setExcited((value) => !value)}
+        />
+      </div>
     </main>
   );
 }
@@ -19,6 +29,9 @@ const styles = {
       'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
     background: '#0f172a',
     color: '#f8fafc',
+  },
+  stack: {
+    textAlign: 'center',
   },
   heading: {
     margin: 0,
