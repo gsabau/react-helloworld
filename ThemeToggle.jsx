@@ -1,21 +1,25 @@
 import React from 'react';
+import { useUi } from './UiContext.jsx';
 
-export function ToggleButton({ onToggle, pressed }) {
+export function ThemeToggle() {
+  const { theme, setTheme } = useUi();
+  const next = theme === 'dark' ? 'light' : 'dark';
+
   return (
     <button
       type="button"
-      onClick={onToggle}
-      aria-pressed={pressed}
+      onClick={() => setTheme(next)}
       style={styles.button}
     >
-      {pressed ? 'Show Hello World' : 'Show Hello Hello'}
+      Theme: {theme}
     </button>
   );
 }
 
 const styles = {
   button: {
-    marginTop: '1.5rem',
+    marginTop: '0.75rem',
+    marginRight: '0.5rem',
     padding: '0.7rem 1.15rem',
     border: '1px solid #334155',
     borderRadius: '999px',
