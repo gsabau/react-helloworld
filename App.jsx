@@ -3,16 +3,19 @@ import { useState } from 'react';
 import { ToggleButton } from './ToggleButton.jsx';
 
 function App() {
-  const [excited, setExcited] = useState(false);
+  // TODO: Create state with useState(false).
+  // Name the value `excited` and the setter `setExcited`.
 
   return (
     <main style={styles.main}>
       <div style={styles.stack}>
-        <h1 style={styles.heading}>{excited ? 'Hello Hello' : 'Hello World'}</h1>
+        <h1 style={styles.heading}>
+          {/* TODO: If excited is true, show "Hello Hello". Otherwise show "Hello World". */}
+        </h1>
         <p style={styles.sub}>Smallest React app with Vite</p>
         <ToggleButton
-          pressed={excited}
-          onToggle={() => setExcited((value) => !value)}
+        // TODO: Pass pressed={excited}
+        // TODO: Pass onToggle — a function that flips state with setExcited
         />
       </div>
     </main>
@@ -46,4 +49,5 @@ const styles = {
 };
 
 document.body.style.margin = '0';
-createRoot(document.getElementById('root')).render(<App />);
+// TODO: Mount <App /> on the element with id "root".
+// Use createRoot(document.getElementById('root')).render(<App />)

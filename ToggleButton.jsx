@@ -1,12 +1,12 @@
-export function ToggleButton({ onToggle, pressed }) {
+export function ToggleButton(/* TODO: receive onToggle and pressed as props */) {
   return (
     <button
       type="button"
-      onClick={onToggle}
-      aria-pressed={pressed}
+      // TODO: Call the onToggle callback when the button is clicked (onClick)
+      // TODO: Set aria-pressed to the pressed prop
       style={styles.button}
     >
-      {pressed ? 'Show Hello World' : 'Show Hello Hello'}
+      {/* TODO: If pressed, show "Show Hello World". Otherwise show "Show Hello Hello". */}
     </button>
   );
 }
