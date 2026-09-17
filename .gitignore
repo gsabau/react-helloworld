@@ -1,10 +1,27 @@
-node_modules
-dist
+# Dependencies
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+
+# Vite
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Env
 .env
 .env.*
 !.env.example
-*.log
+
+# OS
 .DS_Store
 Thumbs.db
-.vscode
-.idea
+
+# Editors
+.idea/
+.vscode/
