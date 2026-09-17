@@ -82,6 +82,7 @@ react-helloworld/
 ├── vite.config.js    # enables the React plugin
 ├── .gitignore        # ignores node_modules and build output
 ├── README.md         # this how-to
+├── how-state-works.md # how App and ToggleButton share state
 └── LICENSE           # MIT
 ```
 
@@ -95,6 +96,8 @@ react-helloworld/
 4. `createRoot(...).render(<App />)` mounts it on `#root`.
 
 Edit `App.jsx` and save. Vite hot-reloads the page without a full refresh.
+
+How `App` and `ToggleButton` share state (props down, callback up): see [how-state-works.md](how-state-works.md).
 
 ## License
 
